@@ -1,0 +1,19 @@
+bind:
+  image: postgres:latest
+  container_name: postgresql_ex
+
+  log_driver: "json-file"
+  log_opt:
+      max-size: "10m"
+      max-file: "5"
+
+  environment:
+      - ROOT_PASSWORD=password
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_USER=sysdba
+      - PGDATA=/data
+  ports:
+    - "5455:5432"
+  volumes:
+    - ./data:/data
+  restart: no
