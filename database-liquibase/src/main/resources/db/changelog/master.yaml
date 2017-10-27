@@ -3,4 +3,4 @@ databaseChangeLog:
     - dbms:
         type: postgresql
   - include:
-      file: db/changelog/base/db.sql
+      file: classpath:/db/changelog/base/db.sql
