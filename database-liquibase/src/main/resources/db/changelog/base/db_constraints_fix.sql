@@ -1,0 +1,2 @@
+ALTER TABLE core_objects ADD CONSTRAINT core_objects_parent_id_fky FOREIGN KEY (parent_id) REFERENCES core_objects (object_id);
+ALTER TABLE object_types ADD CONSTRAINT object_types_parent_id_fky FOREIGN KEY (parent_id) REFERENCES object_types (object_type_id);
