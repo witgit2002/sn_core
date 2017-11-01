@@ -70,3 +70,8 @@ INSERT INTO core_params (attr_id, object_id, value) VALUES (3, 2, 'test@test.com
 INSERT INTO core_objects(object_id, name, description, object_type_id, parent_id, parent_ids)
 VALUES (3, 'TestGroup', '', 2, 1, '0|1|3')
 ;
+
+INSERT INTO attr_object_types (attr_object_type_id, attr_id, object_type_id) VALUES (1, 1, 3);
+INSERT INTO attr_object_types (attr_object_type_id, attr_id, object_type_id) VALUES (2, 2, 3);
+INSERT INTO attr_object_types (attr_object_type_id, attr_id, object_type_id) VALUES (3, 3, 3);
+INSERT INTO attr_object_types (attr_object_type_id, attr_id, object_type_id) VALUES (4, 4, 3);
