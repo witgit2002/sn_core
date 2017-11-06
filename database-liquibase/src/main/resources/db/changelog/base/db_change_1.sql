@@ -1,0 +1,3 @@
+ALTER TABLE object_types ADD version INT NOT NULL DEFAULT 0;
+ALTER TABLE attributes ADD version INT NOT NULL DEFAULT 0;
+
