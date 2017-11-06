@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository
 import java.sql.ResultSet
 
 @Repository
-class CoreObjectDAO: CoreObjectDAOConstants
+class CoreObjectDAO : CoreObjectDAOConstants
 {
 	@Autowired
 	lateinit var coreNamedParamJdbcTemplate: NamedParameterJdbcTemplate
@@ -53,4 +53,23 @@ class CoreObjectDAO: CoreObjectDAOConstants
 	}
 
 
+	fun getObjectsByParentId(parentId: Long): Collection<CoreObjectEntity>
+	{
+		return emptyList()
+	}
+
+	fun getObjectsByReference(objectId: Long, attrId: Long): Collection<CoreObjectEntity>
+	{
+		return emptyList()
+	}
+
+	fun createCoreObject(objectState: CoreObjectEntity)
+	{
+
+	}
+
+	fun updateCoreObject(objectState: CoreObjectEntity)
+	{
+
+	}
 }
