@@ -18,7 +18,7 @@ class CoreObjectController
 	lateinit var coreObjectDAO: CoreObjectDAO
 
 	@ApiOperation(value = "Test if DB is up", notes = "test DB", tags = arrayOf("Object Management"))
-	@GetMapping("/coreObjectDB")
+	@GetMapping("/testDB")
 	fun coreObjectTestDB(): String
 	{
 		val changesInLog = coreJdbcTemplate.queryForObject("SELECT count(1) FROM databasechangelog", java.lang.Long::class.java)

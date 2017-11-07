@@ -1,9 +1,7 @@
 package nz.co.application.core.coreapi.coreParameter
 
 
-class CoreParameter<T>(val value: T)
-{
-    override fun toString(): String {
-        return value.toString()
-    }
-}
+data class CoreParameter<T>(val value: T)
+
+data class ObjectReference(val id: Long, val name: String)
+data class ReferenceList(val id: Long, val objects: List<ObjectReference>)
