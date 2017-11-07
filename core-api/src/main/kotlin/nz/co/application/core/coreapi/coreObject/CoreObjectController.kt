@@ -17,16 +17,7 @@ class CoreObjectController
 	@Autowired
 	lateinit var coreObjectDAO: CoreObjectDAO
 
-	@GetMapping("/coreObjectTest")
-	fun test2(): CoreObjectEntity
-	{
-		val params = HashMap<Long, CoreParameter<Any>>();
-		params.put(10L, CoreParameter("hey hey hey"));
-		params.put(11L, CoreParameter(100));
-		val coreObject = CoreObjectEntity(1L, 2L, 3L, "test Object", "test description", params);
-		return coreObject;
-	}
-
+	@ApiOperation(value = "Test if DB is up", notes = "test DB", tags = arrayOf("Object Management"))
 	@GetMapping("/coreObjectDB")
 	fun coreObjectTestDB(): String
 	{
